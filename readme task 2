@@ -1,0 +1,160 @@
+# 🚢 Titanic Dataset — Exploratory Data Analysis & Data Visualization
+
+This repository contains my work for the **Neurofive Solutions Machine Learning Internship Track**.
+
+The project uses the **Titanic dataset** to practice the fundamentals of data science, including Exploratory Data Analysis (EDA), data cleaning, missing-value handling, outlier detection, and data visualization.
+
+---
+
+## 👨‍💻 Author
+
+**Shoaib Muhammad**
+
+**Program:** BS Artificial Intelligence  
+**Internship:** Neurofive Solutions — Machine Learning Track
+
+---
+
+## 🎯 Project Objectives
+
+The main objectives of this project are to:
+
+- Understand the structure of a real-world dataset
+- Perform Exploratory Data Analysis (EDA)
+- Identify missing values
+- Handle missing data appropriately
+- Identify numerical and categorical features
+- Detect potential outliers
+- Create meaningful data visualizations
+- Analyze relationships between features and passenger survival
+- Develop the habit of interpreting data before applying machine learning models
+
+---
+
+## 📂 Dataset
+
+The project uses the **Titanic: Machine Learning from Disaster** dataset.
+
+The dataset contains information about Titanic passengers, including:
+
+- Passenger ID
+- Survival status
+- Passenger class
+- Name
+- Gender
+- Age
+- Number of siblings/spouses
+- Number of parents/children
+- Ticket
+- Fare
+- Cabin
+- Embarked port
+
+The training dataset contains **891 rows and 12 columns**.
+
+---
+
+# 📌 Task 1 — Dataset Exploration
+
+The first task focused on setting up the data science environment and performing initial EDA.
+
+### Tasks Completed
+
+- Set up Python/Google Colab
+- Imported Pandas and NumPy
+- Loaded the Titanic dataset using `pandas.read_csv()`
+- Inspected the dataset using:
+  - `head()`
+  - `info()`
+  - `describe()`
+  - `shape`
+- Identified missing values
+- Identified numerical and categorical columns
+- Created a short data story summarizing the initial findings
+
+---
+
+# 🧹 Task 2 — Data Cleaning & Visualization
+
+The second task focused on preparing the dataset and understanding it visually.
+
+### Tasks Completed
+
+- Checked missing values
+- Handled missing values using appropriate methods
+- Used median imputation for missing `Age` values
+- Used mode imputation for missing `Embarked` values
+- Removed the `Cabin` column because of its large number of missing values
+- Detected potential outliers using a boxplot
+- Created multiple visualizations
+- Analyzed factors associated with passenger survival
+
+---
+
+## 📊 Visualizations
+
+The project includes the following visualizations:
+
+### 1. Histogram
+
+Used to understand the distribution of passenger ages.
+
+### 2. Boxplot
+
+Used to identify potential outliers in passenger fares.
+
+### 3. Bar Chart
+
+Used to compare the number of passengers who survived and did not survive.
+
+### 4. Correlation Heatmap
+
+Used to examine relationships between numerical features.
+
+### Additional Analysis
+
+Survival rates were also analyzed according to:
+
+- Gender
+- Passenger class
+
+---
+
+## 🔍 Key Findings
+
+Some important observations from the analysis include:
+
+- The dataset contains both numerical and categorical features.
+- `Age`, `Cabin`, and `Embarked` originally contained missing values.
+- `Cabin` had a particularly large amount of missing data.
+- The `Fare` variable contains several potential high-value outliers.
+- Survival rates differ substantially between male and female passengers.
+- Passenger class also shows an important relationship with survival.
+- `Sex` appears to be one of the strongest features associated with survival in this dataset.
+
+> These findings represent associations observed in the dataset and do not necessarily imply causation.
+
+---
+
+## 🛠️ Technologies & Libraries
+
+The project was developed using:
+
+- **Python**
+- **Google Colab**
+- **Pandas**
+- **NumPy**
+- **Matplotlib**
+- **Seaborn**
+- **Git & GitHub**
+
+---
+
+## 📁 Repository Structure
+
+```text
+neurofive-ml-track/
+│
+├── Titanic_EDA.ipynb
+├── Titanic_Data_Cleaning_Task2.ipynb
+└── README.md
