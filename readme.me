@@ -1,0 +1,140 @@
+# House Price Prediction Using Linear Regression
+
+## Overview
+
+This project was completed as part of the **Neurofive Solutions – Machine Learning Internship Track**.
+
+The objective of this task was to build a regression model capable of predicting house values using the **California Housing Dataset**. A Linear Regression model was trained using selected housing-related features and evaluated using Root Mean Squared Error (RMSE) and R² Score.
+
+This project demonstrates the basic workflow of a regression problem, including data preparation, feature selection, train-test splitting, model training, prediction, and performance evaluation.
+
+---
+
+## Objectives
+
+The main objectives of this project were to:
+
+- Load and explore a housing dataset
+- Select relevant features for price prediction
+- Separate features and target variables
+- Split the dataset into training and testing sets
+- Train a Linear Regression model
+- Generate house price predictions
+- Evaluate the model using RMSE and R² Score
+- Visualize predicted versus actual values
+- Interpret the R² Score in simple terms
+
+---
+
+## Dataset
+
+This project uses the **California Housing Dataset** provided by Scikit-learn.
+
+The dataset contains information about housing districts in California.
+
+### Target Variable
+
+`MedHouseVal`
+
+This represents the median house value.
+
+### Features Selected
+
+Five features were selected for the regression model:
+
+| Feature | Description |
+|---|---|
+| `MedInc` | Median income |
+| `HouseAge` | Median house age |
+| `AveRooms` | Average number of rooms |
+| `AveBedrms` | Average number of bedrooms |
+| `Population` | Population |
+
+---
+
+## Data Preparation
+
+The dataset was loaded using the `fetch_california_housing()` function from Scikit-learn.
+
+The dataset was inspected for its structure and missing values before model training.
+
+No missing values were found in the selected dataset, so no missing-value imputation was required.
+
+---
+
+## Train-Test Split
+
+The dataset was divided into training and testing sets using `train_test_split`.
+
+- **80%** of the data was used for training.
+- **20%** of the data was used for testing.
+- `random_state=42` was used to make the experiment reproducible.
+
+The training data was used to learn the relationship between the selected features and house values, while the test data was used to evaluate the model on unseen data.
+
+---
+
+## Machine Learning Model
+
+### Linear Regression
+
+A **Linear Regression** model from Scikit-learn was used for this task.
+
+Linear Regression attempts to learn a mathematical relationship between the input features and the target value. In this project, the model uses the selected housing features to predict the median house value.
+
+---
+
+## Model Evaluation
+
+The model was evaluated using two regression metrics:
+
+### RMSE — Root Mean Squared Error
+
+RMSE measures the typical size of the prediction error. A lower RMSE generally indicates that the model's predictions are closer to the actual values.
+
+**RMSE: 0.8021**
+
+### R² Score
+
+R² Score indicates how much of the variation in the target variable is explained by the model.
+
+**R² Score: 0.5090**
+
+This means that the selected features and Linear Regression model explain approximately **50.90% of the variation** in the house values in the test dataset.
+
+---
+
+## R² Score in Simple English
+
+An R² score of **0.5090** means that the model can explain about **50.90% of the differences in house values** using the five selected features. The remaining variation is influenced by other factors that are not included in this model. Therefore, the model captures some important patterns in house prices but does not explain all of the differences between houses. Additional features and more advanced models could potentially improve the predictions.
+
+---
+
+## Predicted vs Actual Prices
+
+A scatter plot was created to compare the model's predicted house values with the actual values.
+
+Points closer to the diagonal reference line represent predictions that are closer to the actual values. Points farther away from the line indicate larger prediction errors.
+
+---
+
+## Machine Learning Workflow
+
+```text
+California Housing Dataset
+          ↓
+Data Exploration
+          ↓
+Feature Selection
+          ↓
+Train-Test Split
+          ↓
+Linear Regression
+          ↓
+Model Training
+          ↓
+Price Predictions
+          ↓
+RMSE + R² Evaluation
+          ↓
+Predicted vs Actual Visualization
