@@ -1,0 +1,34 @@
+# Titanic Classification — Model Evaluation & Hyperparameter Tuning
+
+## Overview
+
+This project was completed as part of the **Neurofive Solutions – Machine Learning Internship Track**.
+
+The objective of this task was to evaluate a Titanic classification model using performance metrics beyond accuracy and to systematically tune the model using hyperparameter optimization.
+
+A Logistic Regression model was evaluated using Precision, Recall, and F1-score. GridSearchCV was then used to tune the model's hyperparameters and compare the tuned model with the original baseline model.
+
+---
+
+## Objectives
+
+The main objectives of this project were to:
+
+- Evaluate the classification model beyond accuracy
+- Calculate Precision, Recall, and F1-score
+- Understand why accuracy alone can be misleading
+- Apply hyperparameter tuning using GridSearchCV
+- Tune multiple Logistic Regression hyperparameters
+- Compare the original and tuned models
+- Analyze whether tuning improved model performance
+
+---
+
+## Dataset
+
+The project uses the **Titanic - Machine Learning from Disaster** dataset.
+
+The target variable is:
+
+```text
+Survived
