@@ -1,0 +1,296 @@
+Customer Churn Prediction — Machine Learning
+
+Author: Shoaib Muhammad
+Internship: Neurofive Solutions — Machine Learning Track
+Task: Customer Churn Prediction
+Dataset: Telco Customer Churn
+
+Project Overview
+
+Customer churn prediction is a practical machine learning problem used by organizations to identify customers who are likely to leave a service. Early identification of high-risk customers can help businesses design targeted retention strategies and reduce customer loss.
+
+This project analyzes the Telco Customer Churn dataset and develops two classification models:
+
+Decision Tree Classifier
+
+Logistic Regression
+
+The project covers data cleaning, exploratory data analysis (EDA), preprocessing, model training, performance evaluation, feature importance analysis, and business interpretation.
+
+Objectives
+
+Explore factors associated with customer churn.
+
+Clean and preprocess the dataset.
+
+Handle categorical and numerical variables.
+
+Identify class imbalance.
+
+Train a Decision Tree Classifier.
+
+Train a Logistic Regression model.
+
+Compare model performance.
+
+Identify the top three predictive features.
+
+Translate findings into business insights.
+
+Dataset
+
+The dataset contains 7,043 customers and 21 columns.
+
+Important variables include:
+
+tenure — Number of months the customer has stayed
+
+MonthlyCharges — Monthly service charges
+
+TotalCharges — Total amount charged
+
+Contract — Contract type
+
+InternetService — Internet service type
+
+PaymentMethod — Payment method
+
+Churn — Target variable
+
+Target Variable
+
+No → Customer stayed
+
+Yes → Customer churned
+
+Data Preprocessing
+
+The following steps were performed:
+
+Inspected dataset structure and data types.
+
+Checked missing values.
+
+Converted TotalCharges to numeric.
+
+Removed rows with missing values after conversion.
+
+Checked for duplicate records.
+
+Removed customerID.
+
+Converted Churn to binary values (No = 0, Yes = 1).
+
+Applied One-Hot Encoding to categorical variables.
+
+Applied Standard Scaling to numerical variables.
+
+Used a stratified 80/20 train-test split.
+
+Exploratory Data Analysis
+
+Key Findings
+
+Overall churn rate: 26.58%
+
+Month-to-month churn rate: 42.71%
+
+One-year contract churn rate: 11.28%
+
+Two-year contract churn rate: 2.85%
+
+Average tenure of churned customers: 17.98 months
+
+Average tenure of retained customers: 37.65 months
+
+Average monthly charges for churned customers: 74.44
+
+Average monthly charges for retained customers: 61.31
+
+Fiber-optic churn rate: 41.89%
+
+Electronic-check churn rate: 45.29%
+
+Class Imbalance
+
+Class
+
+Percentage
+
+No Churn
+
+73.42%
+
+Churn
+
+26.58%
+
+A stratified train-test split was used to preserve the class distribution. Accuracy was not considered alone; precision, recall, F1-score, and ROC-AUC were also evaluated.
+
+Machine Learning Models
+
+Decision Tree Classifier
+
+Configuration:
+
+max_depth = 5
+
+random_state = 42
+
+The Decision Tree was selected because it is relatively easy to interpret and provides feature importance through feature_importances_.
+
+Logistic Regression
+
+Configuration:
+
+max_iter = 1000
+
+random_state = 42
+
+Logistic Regression was used as an interpretable baseline for binary classification.
+
+Model Performance
+
+Decision Tree
+
+Metric
+
+Score
+
+Accuracy
+
+78.96%
+
+Precision
+
+60.21%
+
+Recall
+
+61.50%
+
+F1 Score
+
+60.85%
+
+ROC-AUC
+
+82.96%
+
+Logistic Regression
+
+Metric
+
+Score
+
+Accuracy
+
+80.38%
+
+Precision
+
+64.85%
+
+Recall
+
+57.22%
+
+F1 Score
+
+60.80%
+
+ROC-AUC
+
+83.59%
+
+Comparison
+
+Logistic Regression achieved better overall accuracy, precision, and ROC-AUC. The Decision Tree achieved slightly higher recall and nearly the same F1-score. For this experiment, Logistic Regression was the stronger overall model, while the Decision Tree offered better rule-based interpretability and feature-importance analysis.
+
+Top 3 Predictive Features
+
+Based on the Decision Tree's feature_importances_:
+
+Rank
+
+Feature
+
+Importance
+
+1
+
+Contract — Month-to-month
+
+0.522339
+
+2
+
+Internet Service — Fiber optic
+
+0.151209
+
+3
+
+Total Charges
+
+0.119405
+
+Note: Feature importance represents predictive importance within the trained Decision Tree. It does not prove direct causation.
+
+Business Summary
+
+The analysis found that 26.58% of customers churned, with churn strongly associated with contract type, tenure, and customer charges. Month-to-month customers showed substantially higher churn than customers with one-year or two-year contracts. Logistic Regression achieved the best overall test performance with 80.38% accuracy and 83.59% ROC-AUC, while the Decision Tree provided slightly higher churn recall. The Decision Tree identified month-to-month contracts, fiber-optic internet service, and total charges as its three most important predictive features. These findings can help businesses identify higher-risk customers and develop targeted retention strategies.
+
+Technologies Used
+
+Python
+
+Pandas
+
+NumPy
+
+Matplotlib
+
+Seaborn
+
+Scikit-learn
+
+Jupyter Notebook
+
+Google Colab
+
+Evaluation Metrics
+
+Accuracy
+
+Precision
+
+Recall
+
+F1 Score
+
+ROC-AUC
+
+Confusion Matrix
+
+Feature Importance
+
+Project Structure
+
+Task-6-Customer-Churn-Prediction/
+│
+├── Task_6_Customer_Churn_Prediction_Shoaib_Muhammad.ipynb
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv
+└── README.md
+
+Conclusion
+
+This project demonstrates an end-to-end customer churn prediction workflow, including data exploration, data cleaning, preprocessing, model training, evaluation, feature analysis, and business interpretation.
+
+The results show that machine learning can provide useful signals for identifying customers at higher risk of churn. In this experiment, Logistic Regression performed best overall, while the Decision Tree provided valuable interpretability and feature-importance insights.
+
+Future improvements could include hyperparameter tuning, class-weight optimization, threshold adjustment, cross-validation, and more advanced churn prediction models.
+
+Completed as part of the Neurofive Solutions — Machine Learning Track.
+
+Author: Shoaib Muhammad
